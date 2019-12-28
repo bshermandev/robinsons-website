@@ -1,0 +1,91 @@
+/* MEDIA QUERIES */
+
+/* TABLETS */
+@media (max-width: 768px) {
+  /* NAV */
+  #main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #logo {
+      margin: 1rem;
+      width: 175px;
+    }
+
+    .menu-nav {
+      margin-bottom: 1rem;
+
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  /* HEADER */
+  .header-title {
+    font-size: 1.3rem;
+  }
+
+  // SECTION A: ABOUT
+  #about {
+    .about-info {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 450px;
+      margin: 0 auto;
+
+      .info-content {
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        h2 {
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+/* SMARTPHONES */
+@media (max-width: 500px) {
+  #main-nav {
+    .menu-wrap {
+      display: block;
+    }
+    .menu-nav {
+      display: none;
+    }
+  }
+
+  /* HEADER */
+
+  .title-container {
+    .header-title {
+      font-size: 1.3rem;
+    }
+  }
+
+  // ABOUT
+  #about {
+    .about-info {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      margin: 0 auto;
+    }
+  }
+
+  // LINE
+  .bottom-line {
+    background: $primary-color;
+    display: block;
+    height: 3px;
+    margin: 0.5rem auto;
+    width: 80%;
+  }
+}

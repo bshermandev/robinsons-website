@@ -1,0 +1,14 @@
+$primary-color: #c4273b;
+$overlay-color: rgba(196, 39, 59, 0.75);
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

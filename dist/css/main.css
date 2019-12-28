@@ -1,0 +1,350 @@
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 3rem;
+  overflow: hidden; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.text-center {
+  text-align: center; }
+
+.bottom-line {
+  background: #c4273b;
+  display: block;
+  height: 3px;
+  margin: 2rem auto;
+  width: 80%; }
+
+.bottom-line-white {
+  background: #fff;
+  display: block;
+  height: 2px;
+  margin: 0 auto 1rem auto;
+  width: 3rem; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.btn-primary {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 2px solid #c4273b; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #c4273b; }
+  .btn-primary:hover {
+    background-color: #fff;
+    color: #c4273b;
+    border: 2px solid #c4273b; }
+
+.bg-primary {
+  background: #c4273b;
+  color: #fff; }
+
+.bg-dark {
+  background: #333;
+  color: #fff; }
+
+.bg-light {
+  background: #f4f4f4;
+  color: #000; }
+
+.bg-medium {
+  background: #ccc;
+  color: #000; }
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* Hamburger Line */
+  /* Toggler Animation */
+  /* Turns Lines Into X */
+  /* Rotate On Hover When Checked */
+  /* Show Menu */ }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0; }
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 4px;
+    background: #c4273b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; }
+    .menu-wrap .hamburger > div::before, .menu-wrap .hamburger > div::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: -10px;
+      width: 100%;
+      height: 4px;
+      background: inherit;
+      border-radius: 10px; }
+    .menu-wrap .hamburger > div::after {
+      top: 10px; }
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+    transition: all 0.4s ease-in-out; }
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg); }
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg); }
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible; }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed); }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s; }
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .menu-wrap .menu > div {
+      background: rgba(196, 39, 59, 0.75);
+      border-radius: 50%;
+      width: 200vw;
+      height: 200vw;
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0);
+      transition: all 0.4s ease; }
+    .menu-wrap .menu > div > div {
+      text-align: center;
+      max-width: 90vw;
+      max-height: 100vh;
+      opacity: 0;
+      transition: opacity 0.4s ease; }
+    .menu-wrap .menu > div > div > ul > li {
+      list-style: none;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 1rem; }
+    .menu-wrap .menu > div > div > ul > li > a {
+      color: inherit;
+      border-bottom: 3px transparent solid;
+      transition: border-color 0.5s;
+      padding-bottom: 0.5rem; }
+    .menu-wrap .menu > div > div > ul > li > a:hover {
+      border-color: #fff; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4rem; }
+  #main-nav .menu-wrap {
+    display: none; }
+  #main-nav #logo {
+    margin: 1.5rem 0;
+    width: 200px; }
+  #main-nav .menu-nav {
+    display: flex;
+    align-items: center; }
+    #main-nav .menu-nav li {
+      padding: 0 1rem; }
+    #main-nav .menu-nav a {
+      border-bottom: 3px transparent solid;
+      font-size: 1rem;
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: border-color 0.5s; }
+      #main-nav .menu-nav a:hover {
+        color: #c4273b;
+        border-color: #c4273b; }
+      #main-nav .menu-nav a.active {
+        color: #c4273b;
+        border-color: #c4273b; }
+
+#header-home .header-content {
+  background: url(../images/icecreambar1.jpeg) no-repeat center center/cover;
+  height: 85vh; }
+  #header-home .header-content .title-container {
+    background: #fff;
+    display: inline-block;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    padding: 1rem; }
+    #header-home .header-content .title-container .header-title {
+      color: #c4273b;
+      text-transform: uppercase; }
+
+#about {
+  margin: 3rem 0; }
+  #about .about-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; }
+    #about .about-info h2 {
+      color: #c4273b; }
+
+#newsletter {
+  margin: 3rem 0; }
+  #newsletter h1 {
+    text-transform: uppercase;
+    color: #c4273b; }
+  #newsletter p {
+    margin-bottom: 1rem; }
+  #newsletter .join-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #newsletter .join-form input {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      width: 350px; }
+      #newsletter .join-form input:focus {
+        border: 2px solid #c4273b;
+        outline: none; }
+
+#main-footer {
+  margin: 2rem 0; }
+  #main-footer .footer-logo {
+    margin-bottom: 1.5rem;
+    width: 150px; }
+  #main-footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; }
+  #main-footer li {
+    margin-right: 1.5rem; }
+    #main-footer li:hover {
+      color: #c4273b;
+      cursor: pointer; }
+  #main-footer p {
+    padding-bottom: 1rem; }
+  #main-footer .social .fab {
+    margin-right: 1rem; }
+    #main-footer .social .fab:hover {
+      color: #c4273b;
+      cursor: pointer; }
+
+/* MEDIA QUERIES */
+/* TABLETS */
+@media (max-width: 768px) {
+  /* NAV */
+  #main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #main-nav #logo {
+      margin: 1rem;
+      width: 175px; }
+    #main-nav .menu-nav {
+      margin-bottom: 1rem; }
+      #main-nav .menu-nav a {
+        font-size: 0.9rem; }
+  /* HEADER */
+  .header-title {
+    font-size: 1.3rem; }
+  #about .about-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 0 auto; }
+    #about .about-info .info-content {
+      margin-bottom: 1rem; }
+      #about .about-info .info-content:last-child {
+        margin-bottom: 0; }
+      #about .about-info .info-content h2 {
+        margin-bottom: 0.3rem; } }
+
+/* SMARTPHONES */
+@media (max-width: 500px) {
+  #main-nav .menu-wrap {
+    display: block; }
+  #main-nav .menu-nav {
+    display: none; }
+  /* HEADER */
+  .title-container .header-title {
+    font-size: 1.3rem; }
+  #about .about-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 0 auto; }
+  .bottom-line {
+    background: #c4273b;
+    display: block;
+    height: 3px;
+    margin: 0.5rem auto;
+    width: 80%; } }
