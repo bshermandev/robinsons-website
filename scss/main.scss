@@ -2,6 +2,8 @@
 @import 'utilities';
 @import 'menu';
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,7 @@
 
 body {
   background: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
 }
 
@@ -38,13 +40,11 @@ h4 {
 #main-nav {
   display: flex;
   justify-content: space-between;
-  padding-right: 4rem;
 
   .menu-wrap {
     display: none;
   }
   #logo {
-    // display: flex;
     margin: 1.5rem 0;
     width: 200px;
   }
@@ -54,12 +54,12 @@ h4 {
     align-items: center;
 
     li {
-      padding: 0 1rem;
+      padding: 0 0.8rem;
     }
 
     a {
       border-bottom: 3px transparent solid;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       padding-bottom: 0.5rem;
       text-decoration: none;
@@ -110,9 +110,12 @@ h4 {
 #about {
   margin: 3rem 0;
   .about-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    display: flex;
+    justify-content: center;
+
+    .info-content {
+      width: 500px;
+    }
 
     h2 {
       color: $primary-color;

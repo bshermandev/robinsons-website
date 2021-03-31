@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 .container {
   max-width: 1280px;
   margin: auto;
@@ -186,7 +187,7 @@
 
 body {
   background: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5; }
 
 a {
@@ -206,8 +207,7 @@ h4 {
 
 #main-nav {
   display: flex;
-  justify-content: space-between;
-  padding-right: 4rem; }
+  justify-content: space-between; }
   #main-nav .menu-wrap {
     display: none; }
   #main-nav #logo {
@@ -217,10 +217,10 @@ h4 {
     display: flex;
     align-items: center; }
     #main-nav .menu-nav li {
-      padding: 0 1rem; }
+      padding: 0 0.8rem; }
     #main-nav .menu-nav a {
       border-bottom: 3px transparent solid;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       padding-bottom: 0.5rem;
       text-decoration: none;
@@ -249,9 +249,10 @@ h4 {
 #about {
   margin: 3rem 0; }
   #about .about-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem; }
+    display: flex;
+    justify-content: center; }
+    #about .about-info .info-content {
+      width: 500px; }
     #about .about-info h2 {
       color: #c4273b; }
 
